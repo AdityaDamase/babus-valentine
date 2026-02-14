@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💖 For Shweta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      padding: 18px;
+      position: relative;
+    }
+
+    .glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      filter: blur(90px);
+      z-index: 0;
+    }
+
+    .glow.one {
+      top: -160px;
+      left: -160px;
+    }
+
+    .glow.two {
+      bottom: -160px;
+      right: -160px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 25px 18px;
+      border-radius: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      max-width: 420px;
+      width: 100%;
+      z-index: 10;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 22px;
+      line-height: 1.4;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 14px 26px;
+      font-size: 17px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+      transition: transform 0.2s ease;
+      min-width: 130px;
+    }
+
+    button:active {
+      transform: scale(0.94);
+    }
+
+    #yes {
+      background: #00e676;
+      color: #003300;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #no {
+      background: #ff1744;
+      color: white;
+      position: relative;
+    }
+
+    #noMsg {
+      margin-top: 18px;
+      font-weight: 800;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Second page image */
+    .love-image {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 22px;
+      border: 4px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+      margin-top: 5px;
+    }
+
+    .love-text {
+      margin-top: 18px;
+      font-size: 24px;
+      font-weight: 900;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    /* BIG panda kiss animation */
+    .panda-group {
+      position: absolute;
+      display: flex;
+      gap: 10px;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0.95;
+      animation: floatGroup linear forwards;
+      filter: drop-shadow(0 12px 22px rgba(0,0,0,0.25));
+    }
+
+    .panda {
+      font-size: 20vw;
+      line-height: 1;
+    }
+
+    @keyframes floatGroup {
+      0% {
+        transform: translateY(110vh) scale(1) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-150px) scale(1.05) rotate(8deg);
+        opacity: 0;
+      }
+    }
+
+    /* Sparkles */
+    .sparkle {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkleBurst 900ms ease-out forwards;
+      box-shadow: 0 0 12px rgba(255,255,255,0.9);
+    }
+
+    @keyframes sparkleBurst {
+      0% {
+        transform: scale(1) translate(0,0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.2) translate(var(--x), var(--y));
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 13px 22px;
+        min-width: 120px;
+      }
+
+      .love-text {
+        font-size: 22px;
+      }
+
+      .panda {
+        font-size: 22vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+
+  <div class="card">
+
+    <!-- PAGE 1 -->
+    <div id="page1">
+      <h1>Shweta 💖</h1>
+      <p>Will you be my Valentine? 🥺💘</p>
+
+      <div class="btn-row">
+        <button id="yes">Yes 💖</button>
+        <button id="no">No 😒</button>
+      </div>
+
+      <p id="noMsg" class="hidden"></p>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div id="page2" class="hidden">
+      <img src="yes.jpg" alt="Love Image" class="love-image">
+      <div class="love-text">I love you Shweta Dogra 💖</div>
+    </div>
+
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    const page1 = document.getElementById("page1");
+    const page2 = document.getElementById("page2");
+
+    const noMsg = document.getElementById("noMsg");
+
+    const noTexts = [
+      "No 😒",
+      "Are you sure? 🥺",
+      "Think again 😏",
+      "Shweta please 😭💔",
+      "Sorry babu 😭",
+      "Babu maan jao 😭❤️",
+      "Don't do this 💔",
+      "Last chance 😭",
+      "Ok fine... but no 😤"
+    ];
+
+    let count = 0;
+
+    function moveNoButton() {
+      const x = Math.random() * 220 - 110;
+      const y = Math.random() * 220 - 110;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    // Runs away on hover (desktop)
+    noBtn.addEventListener("mouseover", moveNoButton);
+
+    // Runs away on touch (mobile)
+    noBtn.addEventListener("touchstart", moveNoButton);
+
+    // Vibration function (mobile-friendly)
+    function vibratePhone() {
+      if (navigator.vibrate) {
+        navigator.vibrate([120, 60, 120]);
+      }
+    }
+
+    // If NO clicked
+    noBtn.addEventListener("click", () => {
+      vibratePhone();
+
+      noMsg.classList.remove("hidden");
+      noMsg.innerText = "Shweta please 😭💔 Sorry babu 🥹";
+
+      count++;
+      noBtn.innerText = noTexts[count % noTexts.length];
+    });
+
+    // Sparkle burst effect
+    function sparkleBurst(button) {
+      const rect = button.getBoundingClientRect();
+
+      for (let i = 0; i < 18; i++) {
+        const sparkle = document.createElement("div");
+        sparkle.classList.add("sparkle");
+
+        const x = (Math.random() * 140 - 70) + "px";
+        const y = (Math.random() * 140 - 70) + "px";
+
+        sparkle.style.left = (rect.left + rect.width / 2) + "px";
+        sparkle.style.top = (rect.top + rect.height / 2) + "px";
+
+        sparkle.style.setProperty("--x", x);
+        sparkle.style.setProperty("--y", y);
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+          sparkle.remove();
+        }, 900);
+      }
+    }
+
+    // YES click -> sparkle + page2
+    yesBtn.addEventListener("click", () => {
+      sparkleBurst(yesBtn);
+
+      setTimeout(() => {
+        page1.classList.add("hidden");
+        page2.classList.remove("hidden");
+      }, 600);
+    });
+
+    // Panda kiss emojis
+    const pandaEmojis = ["🐼😘", "🐼💋", "🐼❤️", "🐼💕", "🐼💖"];
+
+    // Create group of 3-4 pandas
+    function createPandaGroup() {
+      const group = document.createElement("div");
+      group.classList.add("panda-group");
+
+      const pandaCount = Math.floor(Math.random() * 2) + 3; // 3-4 pandas
+
+      for (let i = 0; i < pandaCount; i++) {
+        const panda = document.createElement("div");
+        panda.classList.add("panda");
+        panda.innerText = pandaEmojis[Math.floor(Math.random() * pandaEmojis.length)];
+        group.appendChild(panda);
+      }
+
+      group.style.left = Math.random() * 65 + "vw";
+
+      const duration = Math.random() * 3 + 5; // 5-8 sec
+      group.style.animationDuration = duration + "s";
+
+      document.body.appendChild(group);
+
+      setTimeout(() => {
+        group.remove();
+      }, duration * 1000);
+    }
+
+    // Spawn panda groups
+    setInterval(createPandaGroup, 1200);
+  </script>
+
+</body>
+</html>
